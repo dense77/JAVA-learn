@@ -1,7 +1,24 @@
-public class Myclass {
-    public static int x; // 静态变量 x，属于类的成员
+import java.io.Serializable;
 
-    public static void foo() {
-        // 静态方法 foo，属于类的成员
+public class Myclass implements Serializable {
+    private int id;
+    private String name;
+    private transient String password;
+
+    public Myclass(int id, String name, String password) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+    }
+
+    // 省略 getter 和 setter 方法
+
+    @Override
+    public String toString() {
+        return "MyClass{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
