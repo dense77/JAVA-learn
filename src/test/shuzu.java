@@ -6,41 +6,25 @@ import java.util.stream.Collectors;
 
 public class shuzu {
     public static void main(String[] args) {
-//        int[] anArray = new int[] {1, 7, 3, 8, 5};
-//        List<Integer> aList = new ArrayList<>();
-//        for (int element : anArray) {
-//            aList.add(element);
-//        }
-//        List<Integer> aList1 = Arrays.stream(anArray).boxed().collect(Collectors.toList());
-//        System.out.println(aList);
-//        System.out.println(aList1);
 
-//        List<Integer> aList2 = Arrays.asList(1, 7, 3, 8, 5);
-//        System.out.println(aList2);
-//
-//        Arrays.sort(anArray);
-//
-//        for(int i:anArray){
-//            System.out.println(i);
-//        }
-//
-//        String[] yetAnotherArray = new String[] {"A", "E", "Z", "B", "C"};
-//        Arrays.sort(yetAnotherArray, 1, 3, Comparator.comparing(String::toString).reversed());
+        int[] array1 = {1, 2, 3};
+        int[] array2 = {4, 5, 6};
 
-//        int[] anArray = new int[] {5, 2, 1, 4, 8};
-//        for (int i = 0; i < anArray.length; i++) {
-//            if (anArray[i] == 4) {
-//                System.out.println("找到了 " + i);
-//                break;
-//            }
-//        }
-//
-//
-//        int[] anArray1 = new int[] {1, 2, 3, 3, 4, 8};
-//        int index = Arrays.binarySearch(anArray1, 8);
-//
-//        System.out.println(index);
+        // 创建一个新数组，长度为两个数组长度之和
+        int[] mergedArray = new int[array1.length + array2.length];
+        // 复制第一个数组到新数组
+        System.arraycopy(array1, 0, mergedArray, 0, array1.length);
+        System.out.println(Arrays.toString(mergedArray));
 
+        int[] anArray = new int[] {1, 2, 3, 4, 5};
+        try{
+            System.out.println(anArray[5]);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println(Arrays.toString(anArray));
 
     }
+
+
 }
